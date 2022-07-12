@@ -12,12 +12,11 @@ import React, {type PropsWithChildren} from 'react';
 import {
   SafeAreaView
 } from 'react-native';
+import ChatList from './src/screens/ChatList';
 const App = () => {
-                     
-
   return (
     <SafeAreaView style={{flex: 1}}>
-      
+      <ChatList />
     </SafeAreaView>
   );
 };
