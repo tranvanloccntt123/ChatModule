@@ -38,7 +38,11 @@ const style = StyleSheet.create({
     }
 });
 export default function Card(props: CardProps){
-    return <TouchableOpacity activeOpacity={0.8} style={[style.container, AppStyle.p3]}>
+    function onPress(){
+        const handle = props.onPress? props.onPress() : () => {};
+        handle;
+    }
+    return <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={[style.container, AppStyle.p3]}>
         <Image source={props.item.avatar} style={[style.avatar]} />
         <View style={[AppStyle.ml3, {width: "100%"}]}>
             <Text style={[style.name]}>{props.item.name}</Text>

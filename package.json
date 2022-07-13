@@ -1,7 +1,7 @@
 {
-  "name": "ChatModule",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@teiresource/chatmodule",
+  "version": "0.0.4",
+  "private": false,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -43,5 +43,20 @@
       "json",
       "node"
     ]
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tranvanloccntt123/ChatModule.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tranvanloccntt123/ChatModule/issues"
+  },
+  "homepage": "https://github.com/tranvanloccntt123/ChatModule#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }
