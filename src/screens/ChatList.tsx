@@ -7,6 +7,7 @@ import { ListUserInterface } from "../common/ListUserInterface";
 import { ScreenInterface } from "../common/ScreenInterface";
 import Card from "../components/elements/Card";
 import ChatListLayout from "../components/layouts/ChatListLayout";
+import { addListener, removeListener } from "../sevices/Events";
 
 const testListChart:Array<ListUserInterface> = [
     {
@@ -48,6 +49,12 @@ const testListChart:Array<ListUserInterface> = [
 
 export default function ChatList(props: ScreenInterface){
     const [data, setData] = React.useState<Array<ListUserInterface>>(testListChart);
+    React.useEffect(() => {
+        addListener(() => console.log("Running"));
+        return () => {
+            removeListener(() => console.log("remove listener in chat module"));
+        }
+    }, []);
     const renderItem = (itemProps: {item : any, index : any}) => {
         return <Card {...itemProps} onPress={() => props.navigation?.navigate(CHAT_DETAIL_SCREEN, {item: itemProps.item})} />
     }
